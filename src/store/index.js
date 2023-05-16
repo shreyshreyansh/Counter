@@ -2,7 +2,7 @@ import redux from "redux";
 
 import { CounterActionTypes } from "../enums/counter-action-types";
 
-const counterReducer = (state, action) => {
+const counterReducer = (state = { counter: 0 }, action) => {
   if (action.type === CounterActionTypes.INC) {
     return {
       counter: state.counter + 1,
@@ -19,3 +19,5 @@ const counterReducer = (state, action) => {
 };
 
 const store = redux.createStore(counterReducer);
+
+export default store;
