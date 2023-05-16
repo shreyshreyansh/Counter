@@ -1,4 +1,4 @@
-import redux from "redux";
+import { createStore } from "redux";
 
 import { CounterActionTypes } from "../enums/counter-action-types";
 
@@ -18,6 +18,6 @@ const counterReducer = (state = { counter: 0 }, action) => {
   return state;
 };
 
-const store = redux.createStore(counterReducer);
+const store = createStore(counterReducer);
 
 export default store;
